@@ -1,0 +1,33 @@
+name: Atualizar lista M3U
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obter ficheiros
+        uses: actions/checkout@v4
+
+      - name: Juntar Portugal e Espanha
+        run: |
+          curl -L "https://iptv-org.github.io/iptv/countries/pt.m3u" -o pt.m3u
+          curl -L "https://iptv-org.github.io/iptv/countries/es.m3u" -o es.m3u
+
+          echo "#EXTM3U" > canais.m3u
+          tail -n +2 pt.m3u >> canais.m3u
+          tail -n +2 es.m3u >> canais.m3u
+
+          rm pt.m3u es.m3u
+
+      - name: Guardar lista
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add canais.m3u
+          git diff --cached --quiet || git commit -m "Atualizar canais"
+          git push
