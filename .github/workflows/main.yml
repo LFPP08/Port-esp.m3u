@@ -1,5 +1,6 @@
 name: Atualizar lista M3U
-
+permissions:
+  contents: write
 on:
   workflow_dispatch:
   schedule:
