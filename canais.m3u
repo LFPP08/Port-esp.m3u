@@ -891,3 +891,11 @@ https://amg01415-waterbearnetwor-waterbear-samsunguk-1h0y8.amagi.tv/playlist/amg
 https://janus.xpbroadcasting.com:8443/hls/xptv1.m3u8
 #EXTINF:-1 tvg-id="XPTV2.es@SD" tvg-logo="https://i.imgur.com/74Z8ATB.png" group-title="Entertainment",XPTV2 (720p)
 https://janus.xpbroadcasting.com:8443/hls/xptv2.m3u8
+#EXTINF:-1 group-title="Caça e Pesca",CAZA Y PESCA
+http://svtv.xyz:8080/CesarAlv/GWQ4EAM/379487
+#EXTINF:-1 group-title="Touros",TOROS TV
+http://svtv.xyz:8080/CesarAlv/GWQ4EAM/196452
+#EXTINF:-1 group-title="Touros",MUNDOTORO TV
+http://svtv.xyz:8080/CesarAlv/GWQ4EAM/364416
+#EXTINF:-1 group-title="Informação",EL TORO TV
+http://svtv.xyz:8080/CesarAlv/GWQ4EAM/67515
